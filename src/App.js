@@ -1,26 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Show} from './Show';
+import 'semantic-ui-css/semantic.min.css';
 
-function App() {
+export const App = () => {
+  const userdata = {
+    'name': 'bLaH',
+    'meta': [{
+      'name': 'BLAH1',
+      'BLAH1': 'blah1',
+      'index': 0
+    }, {
+      'name': 'BLAH2',
+      'BLAH2': 'blah2',
+      'index': 1
+    }
+  ]
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Show userdata={userdata}/>
+    </>
   );
 }
-
-export default App;
